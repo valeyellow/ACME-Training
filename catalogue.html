@@ -1,0 +1,89 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css">
+        <script>
+
+            function enrolMessage() {
+                alert('Thanks for registeration, you will get a mail soon!');
+            }
+
+            function validateHTML() {
+            if(document.getElementById('htmlcb').checked) {
+                document.getElementById('htmlreg').innerHTML = 'Registered';
+            }
+
+            else if(!document.getElementById('htmlcb').checked) {
+                document.getElementById('htmlreg').innerHTML = '';
+            }
+
+        }
+            function validateAng() {
+            if(document.getElementById('angcb').checked) {
+                document.getElementById('angreg').innerHTML = 'Registered';
+            }
+            else if(!document.getElementById('angcb').checked) {
+                document.getElementById('angreg').innerHTML = '';
+            }
+
+        }
+            function validateNode() {
+            if(document.getElementById('nodecb').checked) {
+                document.getElementById('nodereg').innerHTML = 'Registered';
+            }
+            else if(!document.getElementById('nodecb').checked) {
+                document.getElementById('nodereg').innerHTML = '';
+            }
+        }
+        </script>
+    </head>
+
+    <body>
+        <div style="background-color: rgb(73, 127, 226); color: white; padding: 4px 4px 4px 30%; height: 60px;"><h1>Acme Training Academy</h1></div>
+        <h2 style="margin: 8px 8px 8px 8px;">Upcoming Trainings</h2>
+        <table class="table">
+            <thead>
+                <tr>
+                    <th>Name of the training</th>
+                    <th>Start Date</th>
+                    <th>End Date</th>
+                    <th>Training Fee</th>
+                    <th>Click to register</th>
+                </tr>
+            </thead>
+            <tbody>
+                <tr>
+                    <td>HTML5 & CSS3</td>
+                    <td>12-Nov-2017</td>
+                    <td>14-Nov-2017</td>
+                    <td>INR 5000</td>
+                    <td><input id="htmlcb" type="checkbox" onclick="validateHTML()"></td>
+                    <td><div id="htmlreg"></div></td>
+                </tr>
+                <tr>
+                    <td>Angular4</td>
+                    <td>01-Dec-2017</td>
+                    <td>05-Dec-2017</td>
+                    <td>INR 15000</td>
+                    <td><input id="angcb" type="checkbox" onclick="validateAng()"></td>
+                    <td><div id="angreg"></div></td>
+                </tr>
+                <tr>
+                    <td>NodeJS</td>
+                    <td>21-Dec-2017</td>
+                    <td>25-Dec-2017</td>
+                    <td>INR 10000</td>
+                    <td><input id="nodecb" type="checkbox" onclick="validateNode()"></td>
+                    <td><div id="nodereg"></div></td>
+                </tr>
+            </tbody>
+        </table>
+        <div class="container">
+            <div class="row">
+                <div class="col-4"></div>
+                <div class="col-6"><button type="button" class="btn btn-primary" style="width: 340px;" onclick="enrolMessage()">Enroll</button></div>
+                <div class="col-4"></div>
+            </div>
+        </div>
+    </body>
+</html>

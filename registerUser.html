@@ -1,0 +1,127 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css">
+
+        <style>
+            .male-radio {
+                margin-right: 12px;
+            }
+        </style>
+        <script>
+            function success() {
+                var name = document.getElementById('name').value;
+                var email = document.getElementById('email').value;
+                var password = document.getElementById('password').value;
+                var confirmPwd = document.getElementById('confirm-pwd').value;
+                var qualification = document.getElementById('qualification').value;
+                var mobile = document.getElementById('mobile').value;
+
+                
+                if (name.length === 0 || email.length === 0 || password.length === 0 || confirmPwd.length === 0 || mobile.length === 0 || qualification === 'Choose your qualification') {
+                    alert('Please enter all the fields!');
+                }
+
+                else {
+                    if(password !== confirmPwd) {
+                    alert("Passwords don't match!");
+                } else {
+                    alert('Registration Successful!')
+                    window.open('C:/Training/StreamTestW1/index.html');
+                }
+            }
+
+                
+        }
+        </script>
+    </head>
+
+    <body>
+        <div style="background-color: rgb(73, 127, 226); color: white; padding: 4px 4px 4px 30%; height: 60px;"><h1>Acme Training Academy</h1></div>
+        <div class="container">
+            <div class="row" style="margin: 1% 0 0 0; padding-top: 6px;">
+                <div class="col-4"></div>
+                <div class="col-8"><h2>Registration Form</h2></div>
+            </div>
+        </div>
+        <div class="container-fluid">
+            <div class="row" style="margin: 4px 12px 4px 18%">
+                <div class="col-12"><hr></div>
+            </div>
+            <div class="row" style="margin: 4px 12px 4px 18%;">
+                <div class="form-inline">
+                    <div class="form-group">
+                        <label style="margin-right: 128px"><strong>Full Name*</strong></label>
+                        <input type="text" id="name" class="form-control" placeholder="Last Name, First Name ex. Smith, John" style="width: 640px;">
+                    </div>
+                </div>
+            </div>
+            <div class="row" style="margin: 8px 12px 8px 18%">
+                <div class="form-inline">
+                    <div class="form-group">
+                        <label style="margin-right: 144px;"><strong>Email Id*</strong></label>
+                        <input type="text" id="email" class="form-control" placeholder="Email" style="width: 640px;">
+                    </div>
+                </div>
+            </div>
+            <div class="row" style="margin: 4px 12px 4px 18%">
+                <div class="form-inline">
+                    <div class="form-group">
+                        <label style="margin-right: 134px;"><strong>Password*</strong></label>
+                        <input type="password" id = "password" class="form-control" style="width: 640px;">
+                    </div>
+                </div>
+            </div>
+            <div class="row" style="margin: 4px 12px 4px 18%">
+                <div class="form-inline">
+                    <div class="form-group">
+                        <label style="margin-right: 68px;"><strong>Confirm Password*</strong></label>
+                        <input type="password" id="confirm-pwd" class="form-control" placeholder="Re-type password" style="width: 640px;">
+                    </div>
+                </div>
+            </div>
+            <div class="row" style="margin: 4px 12px 4px 18%">
+                <div class="form-inline">
+                    <div class="form-group">
+                        <label style="margin-right: 150px;"><strong>Gender*</strong></label>
+                        <div class="male-radio">
+                            <input name="gender" class="male" type="radio" checked style="margin-right : 4px">Male
+                        </div>
+                        <input name = "gender" class="female" type="radio" style="margin-right : 4px">Female
+                    </div>
+                </div>
+            </div>
+            <div class="row" style="margin: 4px 12px 4px 18%">
+                <div class="form-inline">
+                    <div class="form-group">
+                        <label style="margin-right: 24px;"><strong>Educational Qualification</strong></label>
+                        <select class="form-control" id = "qualification" style="width: 640px;">
+                            <option>Choose your qualification</option>
+                            <option>Engineering</option>
+                            <option>Art and Science</option>
+                            <option>Diploma</option>
+                            <option>Others</option>
+                        </select>
+                    </div>
+                </div>
+            </div>
+            <div class="row" style="margin: 4px 12px 4px 18%">
+                <div class="form-inline">
+                    <div class="form-group">
+                        <label style="margin-right: 94px; margin-top: 12px"><strong>Mobile Number</strong></label>
+                        <input type="tel" id="mobile" class="form-control" placeholder="Mobile Number" style="width: 380px; margin-top: 12px">
+                    </div>
+                </div>
+            </div>
+            <div class="row" style="margin: 4px 12px 4px 18%">
+                <div class="form-inline">
+                    <div class="form-group">
+                        <label></label>
+                        <button type="button" class="btn btn-success" style="margin-left: 214px; margin-top: 12px;" onclick="success()">Register</a></button>
+                        <!-- <button type="button" class="btn btn-success" style="margin-left: 214px; margin-top: 12px;" onclick="success()"><a href="index.html" style="color: white;">Register</a></button> -->
+                    </div>
+                </div>
+            </div>
+        </div>
+    </body>
+</html>

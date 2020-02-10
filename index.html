@@ -1,0 +1,53 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <script>
+            var mail = "test@abc.com";
+            var pass = "Test123";
+            function validateUser() {
+                userEmail = document.getElementById("userEmail").value;
+                userPass = document.getElementById("userPass").value;
+                if (userEmail == mail && userPass == pass) {
+                    alert('Login Successful');
+                    return true;
+                } else if (userEmail != mail || userPass != pass) {
+                    document.getElementById('error').innerHTML = 'Incorrect Email/Password entered';
+                    return false;
+                }  else if (userEmail.length() == 0 || userPass.length() == 0) {
+                    document.getElementById('error').innerHTML = 'Email/Password cannot be empty';
+                    return false;
+                }
+            console.log(userEmail);
+            console.log(userPass);
+            }
+            
+        </script>
+        <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css" integrity="sha384-ggOyR0iXCbMQv3Xipma34MD+dH/1fQ784/j6cY/iJTQUOhcWr7x9JvoRxT2MZw1T" crossorigin="anonymous">
+    </head>
+
+    <body>
+        <div style="background-color: rgb(73, 127, 226); color: white; padding: 4px 4px 4px 30%; height: 60px;"><h1>Acme Training Academy</h1></div>
+        <div class="container">
+            <div class="row">
+                <div class="col-3"></div>
+                <div class="col-9">
+                    <h2 style="margin: 2% 0 2% 0;">Login Please!</h2>    
+                    <form onsubmit="return validateUser()" action="catalogue.html">
+                        <div class="form-group" style="width: 50%;">
+                            <label>Email*</label>
+                            <input id="userEmail" type="text" class="form-control" placeholder="Enter Email" required> 
+                        </div>
+                        <div class="form-group" style="width: 50%;">
+                            <label>Password*</label>
+                            <input id="userPass" type="password" class="form-control" placeholder="Enter Password" required>
+                        </div>
+                        <div><p style="font-size: 12px;">New User? <a href="registerUser.html" target="#">Register Here</a></p></div>
+                        <div>
+                            <button type="submit" class="btn btn-primary">Submit</button>
+                        </div>
+                        <div id="error" style="color: red;"></div>
+                    </form>
+                </div>
+        </div>
+    </body>
+</html>
